@@ -33,6 +33,10 @@ gulp.task('watch', function() {
   gulp.watch(['public/**']).on('change', livereload.changed);
 });
 
+gulp.task('build', ['css']);
+
 gulp.task('default', function() {
   gulp.start('watch', 'server');
 });
+
+

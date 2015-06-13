@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "sh startup.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/pm2 start app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/gulp build"
   },
   "author": "Naoufal Kadhom",
   "license": "ISC",
@@ -14,16 +15,14 @@
     "express": "4.12.4",
     "gulp": "3.9.0",
     "gulp-cssnext": "1.0.1",
+    "gulp-livereload": "3.8.0",
+    "gulp-nodemon": "2.0.3",
     "gulp-sourcemaps": "1.5.2",
+    "gulp-watch": "4.2.4",
     "node-jsx": "0.13.3",
     "pm2": "0.12.16",
     "react": "0.13.3",
     "react-markdown": "1.0.3"
-  },
-  "devDependencies": {
-    "gulp-livereload": "3.8.0",
-    "gulp-nodemon": "2.0.3",
-    "gulp-watch": "4.2.4"
   },
   "jshintConfig": {
     "esnext": true,
