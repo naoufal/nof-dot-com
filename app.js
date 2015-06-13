@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-console.log(process.env)
 var PORT = process.env.PORT || 8888;
 
 // // Gzip all the things

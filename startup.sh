@@ -6,6 +6,7 @@ if [ "$NODE_ENV" == 'production' ]; then
 
 # Development
 else
+  ./node_modules/.bin/postcss --use autoprefixer -o assets/css/style.css assets/css/style.css
   ./node_modules/.bin/pm2-dev run app.js
 fi
 
