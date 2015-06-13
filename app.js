@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 8888;
 app.use(require('compression')());
 
 // Serve static files
-app.use(express.static('assets'));
+app.use(express.static('public'));
 
 // Enable JSX and ES6
 require('node-jsx').install({harmony: true});
