@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 
-var autoprefixer = require('gulp-autoprefixer');
 var cssnext = require('gulp-cssnext');
 var livereload = require('gulp-livereload');
 var nodemon = require('gulp-nodemon');
@@ -10,8 +9,7 @@ var watch = require('gulp-watch');
 gulp.task('css', function() {
   gulp.src('assets/css/style.css')
     .pipe(sourcemaps.init())
-      .pipe(autoprefixer())
-      .pipe(cssnext())
+    .pipe(cssnext({compress: true}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./public/css'));
 });
