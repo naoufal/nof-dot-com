@@ -19,10 +19,10 @@ html {
 /* LAYOUT */
 /* ========================================================================= */
 .content {
-  max-width: 1000px;
   margin: 0 auto;
   border-left: 1px solid #eaeaea;
   border-right: 1px solid #eaeaea;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -258,10 +258,16 @@ html {
 
 
 .md blockquote, .md pre {
-  margin: 15px -179px;
+  margin: 15px -100%;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
   background-color: #f8f8f8;
+}
+
+@media (max-width: 640px) {
+  .md blockquote, .md pre {
+    margin: 15px -30px;
+  }
 }
 
 .md pre code, .md blockquote p {
@@ -270,6 +276,14 @@ html {
   margin: 0 auto;
   padding: 20px 80px;
 }
+
+@media (max-width: 640px) {
+  .md pre code, .md blockquote p {
+    padding: 20px 30px;
+  }
+}
+
+
 
 .md pre code {
   line-height: 1.6em;
@@ -299,7 +313,7 @@ html {
   border-radius: 3px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .md img {
     display: relative;
     width: calc(100% + 110px);
@@ -320,7 +334,7 @@ html {
 @media (max-width: 640px) {
   .md small {
     margin: 10px -30px 0;
-    padding: 0 15px;
+    padding: 0 30px;
   }
 }
 
