@@ -10,6 +10,7 @@
 }
 
 @custom-media --mobile (width <= 640px);
+@custom-media --content (width <= var(--maxContentWidth));
 
 /* BASE */
 /* ========================================================================= */
@@ -139,7 +140,7 @@ html {
 }
 
 /* Remove border radius when card isn't visible */
-@media (max-width: var(--maxContentWidth)) {
+@media (--content) {
   .card__top {
     border-radius: 0;
   }
@@ -164,7 +165,7 @@ html {
 }
 
 /* Remove border radius when card isn't visible */
-@media (max-width: var(--maxContentWidth)) {
+@media (--content) {
   .card__inner-shadow {
     border-radius: 0;
   }
@@ -322,7 +323,7 @@ html {
   border-radius: 3px;
 }
 
-@media (max-width: var(--maxContentWidth)) {
+@media (--content) {
   .md img {
     display: relative;
     width: calc(100% + 110px);
