@@ -1,0 +1,13 @@
+/* VARIABLES */
+/* ========================================================================= */
+:root {
+  --bulletBackground: #c9ced1;
+  --codeBackground: #f8f8f8;
+  --headingColor: #292e31;
+  --textColor: #4c555a;
+  --lightTextColor: #999;
+  --maxContentWidth: 800px;
+}
+
+@custom-media --mobile (width <= 640px);
+@custom-media --content (width <= 800px);

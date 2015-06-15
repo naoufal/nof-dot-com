@@ -1,0 +1,202 @@
+/* MARKDOWN */
+/* ========================================================================= */
+.md {
+  max-width: var(--maxContentWidth);
+
+    margin: 0;
+    padding: 0 15px 15px 15px;
+  color: var(--textColor);
+  font-size: 16px;
+}
+
+@media (min-width: 641px) {
+  .md {
+    margin: -120px auto 0;
+    padding: 0 30px 30px;
+  }
+}
+
+@media (min-width: 800px) {
+  .md {
+    padding: 40px 80px;
+  }
+}
+
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+  margin: 25px 0 15px;
+  color: var(--headingColor);
+}
+
+.md h2 {
+  font-size: 24px;
+}
+
+.md h3 {
+  font-size: 18px;
+}
+
+.md p {
+  margin: 15px 0;
+  line-height: 2em;
+}
+
+.md ol, ul {
+  padding: 0;
+}
+
+.md ol {
+  counter-reset: listitem;
+}
+
+.md li {
+  position: relative;
+  margin: 15px 0;
+  list-style: none;
+}
+
+.md ul > li:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--bulletBackground);
+  border-radius: 50%;
+  left: -22px;
+  top: 7px;
+}
+
+@media (--content) {
+  .md ul > li {
+    padding-left: 18px;
+  }
+}
+
+@media (--content) {
+  .md ul > li:before {
+    left: 0px;
+  }
+}
+
+.md ol > li:before {
+  counter-increment: listitem;
+  content: counter(listitem);
+  background-color: var(--bulletBackground);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 11px;
+  position: absolute;
+  left: -32px;
+  top: 1px;
+}
+
+@media (--content) {
+  .md ol > li {
+    padding-left: 26px;
+  }
+}
+
+@media (--content) {
+  .md ol > li:before {
+    left: 0px;
+    top: 3px;
+    padding: 4px 2px 0;
+    font-size: 8px;
+    font-weight: bold;
+  }
+}
+
+.md blockquote, .md pre {
+  margin: 15px -100%;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  background-color: var(--codeBackground);
+}
+
+@media (--content) {
+  .md blockquote, .md pre {
+    margin: 15px -30px;
+  }
+}
+
+.md pre code, .md blockquote p {
+  display: block;
+  max-width: var(--maxContentWidth);
+  margin: 0 auto;
+  padding: 20px 80px;
+}
+
+@media (--content) {
+  .md pre code, .md blockquote p {
+    padding: 20px 30px;
+  }
+}
+
+.md pre code {
+  line-height: 1.6em;
+}
+
+.md blockquote {
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.md p code {
+  padding: 2px 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  background-color: var(--codeBackground);
+}
+
+.md a {
+  text-decoration: none;
+  color: #008cdd;
+}
+
+.md img {
+  display: block;
+  max-width: var(--maxContentWidth);
+  margin: 0 -80px;
+  border-radius: 3px;
+}
+
+@media (--mobile) {
+  .md img {
+    max-width: auto;
+    width: calc(100% + 110px);
+    margin: 0 -30px;
+    border-radius: 0;
+  }
+}
+
+@media (--content) {
+  .md img {
+    display: relative;
+    width: calc(100% + 110px);
+    margin: 0 -30px;
+    border-radius: 0;
+  }
+}
+
+.md small {
+  display: block;
+  max-width: var(--maxContentWidth);
+  margin: 10px -80px 0;
+  color: var(--lightTextColor);
+  font-size: 12px;
+}
+
+
+@media (--content) {
+  .md small {
+    margin: 10px -30px 0;
+    padding: 0 30px;
+  }
+}
+
+.hjls { background: none };

@@ -1,0 +1,44 @@
+/* HERO */
+/* ========================================================================= */
+.hero {
+  background-image: linear-gradient(-134deg, #3023AE 0%, #C86DD7 100%);
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero__content {
+  max-width: var(--maxContentWidth);
+  margin: 0 auto;
+  padding: 50px 0 160px 0;
+}
+
+@media (--mobile) {
+  .hero__content {
+    padding: 30px;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 32px;
+}
+
+@media (--mobile) {
+  .hero__title {
+    font-size: 22px;
+  }
+}
+
+.hero__subtitle {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 18px;
+  opacity: 0.4;
+}
+
+@media (--mobile) {
+  .hero__subtitle {
+    font-size: 16px;
+  }
+}

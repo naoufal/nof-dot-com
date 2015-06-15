@@ -1,0 +1,22 @@
+/* HEADER */
+/* ========================================================================= */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  background-image: linear-gradient(
+    -134deg,
+    #3023AE 0%,
+    #804AC4 75%,
+    #C86DD7 100%
+  );
+  border-bottom: 1px solid rgba(0,0,0,0.17);
+  color: #fff;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 400;
+}

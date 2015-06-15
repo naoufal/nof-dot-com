@@ -1,0 +1,30 @@
+/* NAV */
+/* ========================================================================= */
+.nav {
+  align-self: flex-end;
+}
+
+@media (--mobile) {
+  .nav {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav__item {
+  list-style-type: none;
+  padding-left: 20px;
+
+}
+
+.nav__link {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
