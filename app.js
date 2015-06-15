@@ -2,9 +2,8 @@ var express = require('express');
 var app = express();
 
 var PORT = process.env.PORT || 8888;
-console.log('port: ', PORT);
-console.log('envs: ', process.env);
-// // Gzip all the things
+
+// Gzip all the things
 app.use(require('compression')());
 
 // Serve static files

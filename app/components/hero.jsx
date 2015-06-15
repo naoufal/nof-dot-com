@@ -2,16 +2,31 @@ var React = require('react');
 
 class Hero extends React.Component {
   render() {
+    var title;
+    if (this.props.title) {
+      title = (
+        <h2 className="hero__title">
+          {this.props.title}
+        </h2>
+      );
+    }
+
+    var subtitle;
+    if (this.props.subtitle) {
+      subtitle = (
+        <h3 className="hero__subtitle">
+          {this.props.subtitle}
+        </h3>
+      );
+    }
+
     return (
       /*jshint ignore:start */
       <div className="hero">
-        <h2 className="hero__title">
-          JS Styles with React.js
-        </h2>
-
-        <h3 className="hero__subtitle">
-          I know what you’re thinking, but really, it’s cool!
-        </h3>
+        <div className="hero__content">
+          {title}
+          {subtitle}
+        </div>
       </div>
       /*jshint ignore:end */
     );
